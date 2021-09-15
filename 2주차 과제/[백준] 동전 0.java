@@ -4,28 +4,26 @@ class Main {
 	public static void main(String[] args) {
  
 		Scanner sc = new Scanner(System.in);
-		
-		int N = sc.nextInt();
+
+		// 가지고 있는 동전의 종류 N / 동전 금액의 합 K
+		int N = sc.nextInt();  
 		int K = sc.nextInt();
 		
 		int[] coin = new int[N];
 		
-		for(int i = 0; i < N; i++) {
+		for(int i = 0; i < N; i++) { // 가지고 있는 동전의 종류 coin 리스트에 삽입
 			coin[i] = sc.nextInt();
 		}
 		
-		int count = 0;
- 
+		int count_c = 0;
+		// 사용되는 동전의 수 만큼 count
 		for(int i = N - 1; i >= 0; i--) {
- 
-			// 현재 동전의 가치가 K보다 작거나 같아야지 구성가능하다.
 			if(coin[i] <= K) {
-				// 현재 가치의 동전으로 구성할 수 있는 개수를 더해준다.
-				count += (K / coin[i]);
+				count_c += (K / coin[i]);
 				K = K % coin[i];
 			}
 		}
-		System.out.println(count);
+		System.out.println(count_c);
 	}
  
 }
