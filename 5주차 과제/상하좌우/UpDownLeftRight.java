@@ -6,11 +6,9 @@ public class UpDownLeftRight {
         Scanner sc = new Scanner(System.in);
         System.out.print("이동 공간의 크기 : ");
         int n = sc.nextInt(); // 공간의 크기
-        System.out.print("이동 계획 횟수 : ");
-        int c = sc.nextInt(); // 이동 계획 횟수
-        System.out.print("이동 계획 : ");
-        String[] plan = new String[c]; // 이동 계획
-        for(int i = 0; i < c; i++){
+        sc.nextLine(); // 버퍼 비우기
+        String[] plan = sc.nextLine().split(" ");
+        for(int i = 0; i < plan.length; i++){
             plan[i] = sc.next();
         }
         int x = 1;

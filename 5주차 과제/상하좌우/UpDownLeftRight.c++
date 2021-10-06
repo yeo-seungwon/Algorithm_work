@@ -12,7 +12,7 @@ int dy[4] = {-1, 1, 0, 0};
 char moveTypes[4] = {'L', 'R', 'U', 'D'};
 
 int main(void) {
-    // cin : 표준 입력 버처에서 공백 혹은 개행 문자 이전 까지의 값만을 받아들임
+    // cin : 표준 입력 버퍼에서 공백 혹은 개행 문자 이전 까지의 값만을 받아들임
     cin >> n;
     cin.ignore(); // 버퍼 비우기
     getline(cin, plans); // (입력 스트림, string 객체)
