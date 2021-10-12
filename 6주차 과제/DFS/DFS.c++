@@ -7,7 +7,9 @@ int graph[9][3] = {{}, {2,3,8}, {1,7}, {1,4,5}, {3,5}, {3,4}, {7}, {2,6,8}, {1,7
 
 void dfs(int x) {
     visited[x] = true; // 해당 번호의 노드 방문 처리
-    cout << x << ' '; // 해당 번호 출력 후 공백 출력
+    if(x != 0) {
+        cout << x << ' '; // 해당 번호 출력 후 공백 출력
+    }
     for (int node : graph[x]) {
     // 인접한 노드가 방문한 적이 없다면 DFS 수행
         if(!visited[node]) {
