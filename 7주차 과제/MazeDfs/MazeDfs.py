@@ -1,6 +1,11 @@
-def dfs(x, y) :
-    print("dfs 함수 시작")
-    Stack stack
+# def dfs(x, y) :
+#     stack = []
+#     node = []
+#     stack.push(node)
+
+#     while len(stack) != 0 :
+#         node = stack.pop()
+#         x = node
 
 class Stack: # 선입후출
     #리스트를 이용한 스택 구현
@@ -32,7 +37,7 @@ class Stack: # 선입후출
     def isEmpty(self) -> bool :
         return len(self.top)==0
 
-# 메인 ----------------------------------
+# ----------------------------------------
 n, m = map(int, input().split())
 graph = []
 for i in range(n) :
