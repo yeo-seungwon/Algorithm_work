@@ -12,8 +12,12 @@ def solution(n, arr1, arr2):
 
     return answer
 
-n = (int, input())
 arr1 = list(map(int, input().split()))
 arr2 = list(map(int, input().split()))
+n = len(arr1)
+
+# n = 5
+# arr1 = [9, 20, 28, 18, 11]
+# arr2 = [30, 1, 21, 17, 28]
 
 print(solution(n, arr1, arr2))
